@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MenuPage"
+    android:background="@color/background_dark"
+    android:paddingLeft="@dimen/_24sdp"
+    android:paddingRight="@dimen/_18sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_21sdp"
+        android:id="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/leftAligned">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/syne_bold"
+                android:text="Hey,"
+                android:textColor="@color/text_color_light"
+                android:textSize="@dimen/_24sdp"
+                android:id="@+id/heading_text1"/>
+
+            <TextView
+                android:id="@+id/heading_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heading_text1"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/syne"
+                android:text="what's up!"
+                android:textColor="@color/text_color_light"
+                android:textSize="@dimen/_24sdp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/_102sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/rightAligned">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_116sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/view_cart_background"
+                android:clipToOutline="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/view_cart"
+                android:layout_centerVertical="true"
+                android:onClick="viewCart">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/circular_background_lightback"
+                    android:layout_alignParentLeft="true"
+                    android:clipToOutline="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:id="@+id/view_cart_img">
+
+                    <ImageView
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/inside_viewcart_img" />
+
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/view_cart_img">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="View your cart"
+                        android:textColor="@color/text_color_light"
+                        android:textSize="@dimen/_9sdp"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:fontFamily="@font/syne_medium"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/menu_recycler_view"/>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
